@@ -3,6 +3,19 @@ var database = [
         username: "ladan",
         password: "7777777"
     },
+    {
+        username: "sally",
+        password: "123"
+    },
+    {
+        username: "yasaman",
+        password: "789"
+    },
+    {
+        username: "bardia",
+        password: "hahaha"
+    },
+
 ]
 
 
@@ -26,7 +39,7 @@ function signIn (username, password) {
     if (username === database[0].username && password === database[0].password) {
         return timeline;
     } else {
-        alert("Check your username and password!")
+        alert("Sorry, wrong username and password!")
     }
 }
 
