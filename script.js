@@ -31,21 +31,22 @@ var timeline = [
 var usernamePrompt = prompt("What's your username?");
 var passwordPrompt = prompt("What's your password?");
 
-function signIn(username, password) {
-//   database.map((user) => {
-//     if (username === user.username && password === user.password) {
-//       return timeline;
-//     } else {
-//       alert("Sorry, wrong username and password!");
-//     }
-//   });
+function isUserValid(username, password) {
 
     for (var i = 0; i < database.length; i++) {
         if (username === database[i].username && password === database[i].password) {
-            console.log(timeline)
-        } else {
-            alert("Sorry, wrong username and password")
-        }
+            return true;
+        } 
+    }
+    return false;
+}
+
+function signIn(username, password) {
+
+    if (isUserValid(username, password)) {
+        console.log(timeline)
+    } else {
+        alert("Sorry, wrong username and password")
     }
 }
 
